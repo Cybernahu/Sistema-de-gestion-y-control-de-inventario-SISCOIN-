@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../styles/estilos.css" />
+    <title>Informatica</title>
+</head>
+<?php 
+/** 
+ * @brief Impide el ingreso a la ventana sin el logueo previo, también impide que otros usuarios sin permisos ingresen en este
+ */
+    session_start(); 
+    
+    if(empty($_SESSION['usuario'])){
+        
+        header('location:index.php');
+        
+    }else{
+        if($_SESSION['perfil']=='gerente'){
+            echo "<script>alert(\"No tienes permiso de entrar en este usuario.\");window.location='cliente.php';</script>";
+        }else{
+            
+        }if($_SESSION['perfil']=='auditoria'){
+            echo "<script>alert(\"No tienes permiso de entrar en este usuario.\");window.location='auditoria.php';</script>";
+        }else{
+            
+        }if($_SESSION['perfil']=='director'){
+            echo "<script>alert(\"No tienes permiso de entrar en este usuario.\");window.location='director.php';</script>";
+        }else{
+            
+        }if($_SESSION['perfil']=='sub_a'){
+            echo "<script>alert(\"No tienes permiso de entrar en este usuario.\");window.location='subdireccionA.php';</script>";
+        }else{
+            
+        }if($_SESSION['perfil']=='sub_b'){
+            echo "<script>alert(\"No tienes permiso de entrar en este usuario.\");window.location='subdireccionB.php';</script>";
+        }else{
+            
+        }if($_SESSION['perfil']=='compras'){
+            echo "<script>alert(\"No tienes permiso de entrar en este usuario.\");window.location='compras.php';</script>";
+        }else{
+            
+        }                       
+
+    }    
+    
+?>
+<body>
+    <header>
+        <nav class="nav">
+            <a class="cerrarSesion"  href="logout.php">
+                Cerrar Sesión
+            </a>
+        </nav>
+    </header>
+    <h1 class="tituloInformatica" >INFORMATICA</h1>
+    <div class="contenedorPrincipalInformatica">
+        <h3 class="tituloSolicitudesInformatica">Solicitudes</h3>
+        <div class="contenedorTablaInformatica">
+           
+            
+                <table >
+                    <tr  class="tablaInformatica">
+                        <th >
+                            Nro Solicitud
+                        </th>
+                        <th>
+                            Fecha
+                        </th>
+                        <th>
+                            Motivo
+                        </th>
+                        <th>
+                            Articulo
+                        </th>
+                        <th>
+                            Cantidad
+                        </th>
+                        <th>
+                            Estado Solicitud
+                        </th>
+                        
+                    </tr>
+                    <tr  class="tablaInformatica">
+                        <td>
+                            ola
+                        </td>
+                        <td>
+                            carambola
+                        </td>
+                        <td>
+                            Cacerola
+                        </td>
+                        <td>
+                            Ornitorrinco
+                        </td>
+                        <td>
+                            equisde
+                        </td>
+                        <td>
+                            hipopotamo
+                        </td>
+                    </tr>
+                    <tr  class="tablaInformatica">
+                        <td>
+                            ola
+                        </td>
+                        <td>
+                            carambola
+                        </td>
+                        <td>
+                            Cacerola
+                        </td>
+                        <td>
+                            Ornitorrinco
+                        </td>
+                        <td>
+                            equisde
+                        </td>
+                        <td>
+                            hipopotamo
+                        </td>
+                    </tr>
+                    <tr  class="tablaInformatica">
+                        <td>
+                            ola
+                        </td>
+                        <td>
+                            carambola
+                        </td>
+                        <td>
+                            Cacerola
+                        </td>
+                        <td>
+                            Ornitorrinco
+                        </td>
+                        <td>
+                            equisde
+                        </td>
+                        <td>
+                            hipopotamo
+                        </td>
+                    </tr>
+                    <tr  class="tablaInformatica">
+                        <td>
+                            ola
+                        </td>
+                        <td>
+                            carambola
+                        </td>
+                        <td>
+                            Cacerola
+                        </td>
+                        <td>
+                            Ornitorrinco
+                        </td>
+                        <td>
+                            equisde
+                        </td>
+                        <td>
+                            hipopotamo
+                        </td>
+                    </tr>
+                </table>
+                <table >
+                    <tr  class="tablaInformatica">
+                        <th >
+                            Nro Solicitud
+                        </th>
+                        <th>
+                            Fecha
+                        </th>
+                        <th>
+                            Motivo
+                        </th>
+                        <th>
+                            Articulo
+                        </th>
+                        <th>
+                            Cantidad
+                        </th>
+                        <th>
+                            Estado Solicitud
+                        </th>
+                        
+                    </tr>
+                    <tr  class="tablaInformatica">
+                        <td>
+                            ola
+                        </td>
+                        <td>
+                            carambola
+                        </td>
+                        <td>
+                            Cacerola
+                        </td>
+                        <td>
+                            Ornitorrinco
+                        </td>
+                        <td>
+                            equisde
+                        </td>
+                        <td>
+                            hipopotamo
+                        </td>
+                    </tr>
+                   
+                </table>
+        </div>
+        <div class="contenedorBotonAuditoria">
+            <button class="botonAuditoria"> Solicitar repuestos </button>
+        </div>
+    </div>
+</body>
+</html>
